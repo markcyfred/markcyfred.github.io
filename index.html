@@ -1,713 +1,1116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title>Mark Kinai Leshatin Portfolio</title>
+    <meta name="description" content="MywebMark Technologies - Portfolio ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png">
 
-  <title>Mark Mutinda Kinai</title>
-  
+    <!-- ======= All CSS Plugins here ======== -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap"
+        rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
 
+    <!-- Dark css here -->
+    <link rel="stylesheet" href="assets/css/dark.css">
 
+    <!-- Rtl css here -->
+    <link rel="stylesheet" href="assets/css/rtl.css">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/icon.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicon.css" rel="stylesheet">
- 
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <script>
-
-    function hideCSSLinks(linkHref) {
-      var links = document.getElementsByTagName('link');
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].getAttribute('href') === linkHref) {
-          links[i].setAttribute('disabled', 'disabled');
-          links[i].parentNode.removeChild(links[i]);
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
         }
-      }
-    }
-
-    // Hide the specified CSS links after the page has loaded
-    window.addEventListener("load", function () {
-      hideCSSLinks('assets/vendor/glightbox/css/glightbox.min.css');
-      hideCSSLinks('assets/vendor/swiper/swiper-bundle.min.css');
-    });
-  </script>
-  <div id="phpContent"></div>
-
-
-
-
-
-  <script>
-    fetch('forms/calimarkshapes.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('phpContent').innerHTML = data;
-      })
-      .catch(error => {
-        console.error('Error fetching PHP content:', error);
-      });
-  </script>
-  <script>
-    console.log("Hello! Feel free to explore the code, but remember that it's just a small part of the magic. 😉");
-  </script>
-
-
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets1/css/fontawesome.css">
+        if (localStorage.getItem("theme-color") === "light") {
+            document.documentElement.classList.remove("dark");
+        } 
+    </script>
 
 </head>
 
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ79QDTQC9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XZ79QDTQC9');
-</script>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
-        <li><a class="nav-link scrollto" href="#services">Services</a></li>
-        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Z32XD0M4D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3Z32XD0M4D');
-</script>
-  </header><!-- End Header -->
-<!-- Google tag (gtag.js) -->
-
-  <!-- ======= Hero Section ======= -->
- <section id="hero">
-    <div class="hero-container">
-        <h1 style="font-size: 44px; font-family: Georgia, Helvetica, sans-serif; color: #333;"> I'm Mark
-            Mutinda Kinai.</h1>
-        <h2 style="color: rgb(129, 155, 241);">Web Developer & SEO Specialist  </h2>
-        
-        <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
-        <a href="assets/img/Mark Kinai Resume.pdf" class="btn-download" title="Download CV/Resume" download>Download CV/Resume</a>
+<body class="bg-dark_primary_bg">
+    <!-- Preloader start -->
+    <div class="ld-ripple" id="loader">
+        <div></div>
+        <div></div>
     </div>
-</section>
-<style>
-  @media (max-width: 768px) {
-      /* Adjust font size for smaller screens */
-      
-      
-      /* Adjust padding for h2 on mobile */
-      h2 {
-          padding-left: 0px;
-          padding-right: 60px;
-          text-align: left;
-      }
+    <script>
+        window.onload = function () {
+            document.getElementById("loader").style.display = "none";
+        };
 
-      .btn-scroll {
-            margin-right: 60px; /* Adjust as needed */
-        }
-
-        .btn-download {
-            margin-right: 0px; /* Adjust as needed */
-        }
-  }
-</style>
-<style>
-/* Your existing styles */
-
-.btn-download {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* Change this to your desired button color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-download:hover {
-    background-color: #0a2c50; /* Change this to your desired hover color */
-}
-
-/* Add this CSS in your stylesheet */
-
-</style>
-
-
-
-  <main id="main">
-
-
-    <!-- ======= About Me Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <!-- <span>About Me</span> -->
-          <h2>About Me</h2>
-          <p>I'm a committed web developer and IT specialist </p>
+    </script>
+    <!-- Preloader end -->
+    <button class="light__dark--btn style__fixed" id="light__to--dark">
+        <svg class="dark--mode__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+            <title>Moon</title>
+            <path
+                d="M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z">
+            </path>
+        </svg>
+        <svg class="light--mode__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+            <title>Sunny</title>
+            <path
+                d="M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z">
+            </path>
+        </svg>
+    </button>
+    <!-- Start header area -->
+    <header class="header__section  header__transparent">
+        <div class="header__sticky">
+            <div class="container">
+                <div class="main__header d-flex justify-content-between align-items-center">
+                    <div class="main__logo">
+                        <h1 class="main__logo--title"><a class="main__logo--link" href="index.html">
+                                <img class="main__logo--img logo_light" src="assets/img/logo.png" alt="logo-img">
+                                <img class="main__logo--img logo_dark" src="assets/img/logo.png" alt="logo-img">
+                            </a></h1>
+                    </div>
+                    <div class="offcanvas__header--menu__open ">
+                        <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg"
+                                viewBox="0 0 512 512">
+                                <path fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" />
+                            </svg>
+                            <span class="visually-hidden">Offcanvas Menu Open</span>
+                        </a>
+                    </div>
+                    <div class="main__header--right d-flex align-items-center d-none d-lg-block">
+                        <div class="header__menu menu_border--none">
+                            <nav class="header__menu--navigation">
+                                <ul class="header__menu--wrapper d-flex">
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#home">Home
+                                        </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#about">About </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#servives">Service </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#portfolio">Portfolio </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#contact">Contact </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <a href="assets/img/Mark Kinai Resume.pdf" download="Mark Kinai" class="primary__btn download__btn">
+                            <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download CV
+                        </a>
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </header>
+    <!-- End header area -->
 
-        <div class="row">
-          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-          <div class="col-lg-8 d-flex flex-column align-items-stretch">
-            <div class="content ps-lg-4 d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Mark Mutinda Kinai</span></li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Website:</strong>
-                      <span><a href="https://mywebmark.tech" target="_blank">mywebmark.tech</a></span>
+    <!-- Start Offcanvas header menu -->
+    <div class="offcanvas__header">
+        <div class="offcanvas__inner">
+            <div class="offcanvas__logo">
+                <a class="offcanvas__logo_link" href="index.html">
+                    <img src="assets/img/logo.png" alt="Logo-img" width="158" height="36">
+                </a>
+                <button class="offcanvas__close--btn" data-offcanvas>close</button>
+            </div>
+            <nav class="offcanvas__menu">
+                <ul class="offcanvas__menu_ul">
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="index.html">Home</a>
+                        <ul class="offcanvas__sub_menu"></ul>
                     </li>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#about">About</a>
+                        <ul class="offcanvas__sub_menu"></ul>
                     </li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+254 792 966 620</span>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#services">Services</a>
+                        <ul class="offcanvas__sub_menu"></ul>
                     </li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Nairobi, Kenya</span></li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Diploma:</strong> <span>Computer science</span></li>  
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>
-                      <span><a href="mailto:markkinai3@gmail.com">markkinai3@gmail.com</a></span>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#portfolio">Portfolio</a>
+                        <ul class="offcanvas__sub_menu"></ul>
                     </li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Web Developer:</strong> <span>Available</span></li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Age:</strong>
-                      <span id="age">20</span>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#contact">Contact</a>
                     </li>
-                    
-                    <script>
-                       function updateAge() {
-                       const birthYear = 2003; 
-                        const currentYear = new Date().getFullYear();
-                        const age = currentYear - birthYear;
-                        document.getElementById('age').textContent = age;
-                      }
-                      updateAge();
-                      setInterval(updateAge, 1000 * 60 * 60 * 24 * 365); 
-                    </script>
-                    
-                    
-                    </li>
-                    
-                
-                  </ul>
-                </div>
-              </div>
-              <div class="row mt-n4">
-                <div class="col-md-3 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile" style="color: #20b38e;"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> </p>
-                  </div>
+                </ul>
+                <div class="offcanvas__download--btn">
+                    <a href="assets/img/Mark Kinai Resume.pdf" download="Mark Kinai" class="primary__btn download__btn">
+                        <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download CV
+                    </a>
                 </div>
 
-                <div class="col-md-3 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext" style="color: #8a1ac2;"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <p><strong>Projects</strong>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-3 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock" style="color: #2cbdee;"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <p><strong>Years experience</strong> </p>
-                  </div>
-                </div>
-
-                <div class="col-md-3 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award" style="color: #ffb459;"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <p><strong>Awards</strong> </p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-
-
-
-          </div>
-    </section><!-- End About Me Section -->
-
-    <section class="skilla">
-      <div class="skills-content ps-lg-4">
-        <h4 style="text-align: center;margin-bottom: 30px;">Here is a list of the technologies that I'm familiar with
-        </h4>
-        <div class="skills-container">
-          <div class="skills-column">
-            <h5>Basic Technologies</h5>
-            <ul class="skills-list">
-              <li>
-                <span class="technology">HTML</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0"
-                    aria-valuemax="100">99%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">CSS</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-                    aria-valuemax="100">95%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">PHP</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">JavaScript|AJAX|JQUERY</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">50%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">C++</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">50%</div>
-                </div>
-              </li>
-              <!-- Add more basic technologies here -->
-            </ul>
-          </div>
-
-          <div class="skills-column">
-            <h5>Frameworks</h5>
-            <ul class="skills-list">
-              <li>
-                <span class="technology">CodeIgniter </span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-                    aria-valuemax="100">95%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">Bootstrap</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                    aria-valuemax="100">90%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">Materialize CSS</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                    aria-valuemax="100">90%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">Tailwind CSS</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">Laravel</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">50%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="skills-column">
-            <ul class="skills-list">
-              <h5>Other Tools</h5>
-              <li>
-                <span class="technology">Computer hardware & software</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                    aria-valuemax="100">90%</div>
-                </div>
-              </li>
-              <li>
-                <span class="technology">articles & blogs writing</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                    aria-valuemax="100">90%</div>
-                </div>
-              </li>
-
-              <li>
-                <span class="technology">WordPress</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
-              </li>
-
-              <li>
-                <span class="technology">MySQL</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
-              </li>
-
-
-              <li>
-                <span class="technology">Git</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100">60%</div>
-                </div>
-              </li>
-              <!-- Add more other tools here -->
-            </ul>
-          </div>
+            </nav>
         </div>
-      </div>
-    </section>
-    <style>
-      .skilla {
-        display: flex;
-        justify-content: center;
-        /* background-color: #f5f5f5; */
-        padding: 40px 0;
-      }
+    </div>
+    <!-- End Offcanvas header menu -->
 
-      .skills-content {
-        max-width: 1200px;
-        width: 100%;
-        padding: 0 15px;
-      }
 
-      .skills-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
+    <main class="main__content_wrapper">
+        <!-- Start Hero section -->
+        <div class="hero__section hero__section--bg" id="home">
+            <div class="container">
+                <div class="hero__section--inner d-flex align-items-center">
+                    <div class="hero__thumbnail position__relative">
+                        <img class="hero__thumbnail--media light_img" src="assets/img/hero/her.png" alt="img">
 
-      .skills-column {
-        flex: 0 0 calc(33.33% - 20px);
-        padding: 10px;
-        /* background-color: #e61d1d; */
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1px;
-      }
-
-      .skills-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .progress-bar {
-        height: 20px;
-        background-color: #0f5a05;
-      }
-
-      .progress {
-        width: 100%;
-        margin-top: 4px;
-      }
-      .skills-column {
-        flex: 0 0 calc(100% - 20px); /* Change to full width for mobile */
-        padding: 10px;
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px; /* Increase margin for separation */
-    }
-
-      .progress-bar div {
-        height: 100%;
-        background-color: #4caf50;
-        text-align: right;
-        color: #fff;
-        padding-right: 4px;
-      }
-      @media (min-width: 768px) {
-        .skills-container {
-            /* Restore the original layout on larger screens */
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .skills-column {
-            /* Restore the original column width on larger screens */
-            flex: 0 0 calc(33.33% - 20px);
-            margin-bottom: 1px;
-        }
-    }
-    </style>
-    <!-- ======= My Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Resume</span>
-          <h2>My Resume</h2>
-          <p>where i have reached</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Web Developer & SEO Specialist</h4>
-              <p><em>Web developer with a flair for innovation who has spent more than one year producing timely
-                  user-centered digital solutions.</em></p>
-              <p>
-              <ul>
-                <li>Fedha Nairobi Kenya</li>
-                <li>+254 792 966 620</li>
-                <li>
+                        <img class="hero__thumbnail--media dark_img" src="assets/img/hero/her.png" alt="img">
+                        <div class="projects__budget d-flex align-items-center">
+                            <span class="projects__budget--icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check-circle">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </span>
+                            <div class="projects__budget--content">
+                                <span class="projects__budget--ammount">19+</span>
+                                <span class="projects__budget--text">Complete Projects</span>
+                            </div>
+                        </div>
+                        <span class="logo__positioning one">
+                            <img src="assets/img/logo/figma-logo.png" alt="logo">
+                        </span>
+                        <span class="logo__positioning two">
+                            <img style="width: 100px;" src="assets/img/logo/vs.png" alt="logo">
+                        </span>
+                    </div>
+                    <div class="hero__content">
+                        <span class="hero__content--subtitle text__secondary mb-10">HELLO I'M</span>
+                        <h2 class="hero__content--title mb-15">Mark Kinai! </h2>
+                        <h3 class="hero__content--subtitle2 mb-20">
+                            WEB DEVELOPER & SEO SPECIALIST
+                        </h3>
+                        <p class="hero__content--desc mb-30">Exploring innovations in the realm of Information
+                            Technology for a
+                            sustainable future.</p>
+                        <div class="hero__content--footer d-flex align-items-center">
+                            <a class="btn hero__content--btn" href="#about">About Me</a>
+                            <div class="social__share d-flex align-items-center">
+                                <span class="social__share--title">Follow Me: </span>
+                                <ul class="social__share--wrapper d-flex">
+                                    <li class="social__share--child"><a class="social__share--link" target="_blank" href="https://www.facebook.com/mark.kinai.1/">
+                                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24" width="20px" height="20px">
+                                                <path
+                                                    d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z" />
+                                            </svg>
+                                            <span class="visually-hidden">Facebook</span>
+                                        </a>
+                                    </li>
+                                
+                                    <li class="social__share--child">
+                                        <a class="social__share--link" target="_blank" href="https://www.linkedin.com/in/mark-kinai-2948b3275/">
+                                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px">
+                                                <image xlink:href="assets/img/LinkedIn_icon.svg.png" width="24" height="24" alt="LinkedIn"/>
+                                            </svg>
+                                            <span class="visually-hidden">Linkedin</span>
+                                        </a>
+                                    </li>
                                     
-                  <span><a href="mailto:markkinai3@gmail.com">markkinai3@gmail.com</a></span>
-                </li>
-              </ul>
-              </p>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Diploma in Computer Science</h4>
-              <h5>2022 - 2023</h5>
-              <p><em>St Paul's University </em></p>
-              <p>Network administration, programming, web development, software engineering, and server support. </p>
-            </div>
-            <div class="resume-item">
-              <h4>High School Education</h4>
-              <h5>2018 - 2022</h5>
-              <p><em>Kasikeu Boys High School</em></p>
-              <p>High school years marked by growth, engagement in diverse subjects, and forming the foundation for
-                future pursuits.</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Web Developer &amp; SEO Specialist</h4>
-              <h5>01/8/2023- Present</h5>
-              <p><em>Nairobi Kenya </em></p>
-              <p>
-              <ul>
-                <li>Translated visual designs into interactive web pages using HTML, CSS, and PHP, WordPress, in coordination with design teams</li>
-                <li>Extracted insights from data to inform decision-making and tailor SEO strategies for maximum effectiveness </li>
-                <li>Displayed a consistent commitment to learning evolving SEO techniques and tools to drive sustained organic traffic growth.</li>
-                <li>Assisted in pinpointing and resolving technical issues affecting search engine crawling, including site speed and mobile friendliness</li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Web Developer <span style="color: #20b38e;">| </span>intership</h4>
-              <h5>4/2023- 7/2023</h5>
-              <p><em>Stepping Stone in Web Development, Machakos, Kenya</em></p>
-              <p>
-              <ul>
-                <li>Under Mr. Signature's guidance, I honed web development skills from April 26 to July 28, 2023.</li>
-
-                <li>Finishing <a href="https://myshoman.com" target="_blank">myshoman.com</a>  a robust website, showcased expertise in PHP, CodeIgniter, JavaScript, and Restful APIs.</li>
-
-
-              </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End My Resume Section -->
-
-
-
-    <!-- ======= Contact Me Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Contact Me</span>
-          <h2>Contact Me</h2>
-          
-        </div>
-
-        <div class="row">
-    <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-                <a href="https://www.facebook.com/mark.kinai.1" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://linkedin.com/in/mark-kinai-2948b3275/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                    <li class="social__share--child">
+                                        <a class="social__share--link" target="_blank" href="https://mywebmark.tech">
+                                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px">
+                                                <image xlink:href="assets/img/logo.png" width="24" height="24" alt="LinkedIn"/>
+                                            </svg>
+                                            <span class="visually-hidden">Website</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <a href="mailto:markkinai3@gmail.com">markkinai3@gmail.com</a>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p>+254 792 966 620</p>
-        </div>
-    </div>
-</div>
+        <!-- End Hero section -->
+        <!-- Start services section -->
+        <section class="services__section section--padding" id="services">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">MY SERVICES</span>
+                        <h2 class="section__heading--title">What I Can Do</h2>
+                    </div>
+                    <div class="section__heading--right max-width-450">
+                        <p class="section__heading--desc">Explore my expertise in various areas.</p>
+                    </div>
+                </div>
+                <div class="services__section--inner">
+                    <div class="row mb--n30">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                            <div class="services__card">
+                                <span class="services__card--icon color1 mb-25">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-database">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    </svg>
+                                </span>
+                                <div class="services__card--content">
+                                    <h3 class="services__card--title mb-15">Database Management</h3>
+                                    <p class="services__card--desc mb-20">Skilled in managing databases efficiently,
+                                        ensuring data integrity, security,
+                                        and availability for various applications.
+                                    </p>
+                                    <a class="services__card--link color1" target="_blank"
+                                        href="https://mywebmark.tech">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                            <div class="services__card">
+                                <span class="services__card--icon color2 mb-25">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-cpu">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                        <rect x="9" y="9" width="6" height="6"></rect>
+                                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                                    </svg>
+                                </span>
+                                <div class="services__card--content">
+                                    <h3 class="services__card--title mb-15">System Administration</h3>
+                                    <p class="services__card--desc mb-20">Proficient in system administration tasks,
+                                        including installation, configuration, and maintenance of operating systems and
+                                        network.</p>
+                                    <a class="services__card--link color1" target="_blank"
+                                        href="https://mywebmark.tech">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                            <div class="services__card">
+                                <span class="services__card--icon color3 mb-25">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-code">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </span>
+                                <div class="services__card--content">
+                                    <h3 class="services__card--title mb-15">Programming</h3>
+                                    <p class="services__card--desc mb-20">Proficient in various programming languages
+                                        and frameworks, with experience in developing custom solutions for diverse
+                                        projects.</p>
+                                    <a class="services__card--link color1" target="_blank"
+                                        href="https://mywebmark.tech">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb--n30">
+                            <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="services__card">
+                                    <span class="services__card--icon color1 mb-25">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-cloud">
+                                            <path
+                                                d="M8,8c0,0-5,0.036-5,4c0,2.205,1.794,4,4,4h12c2.206,0,4-1.794,4-4c0-3.99-4-4-4-4H8z">
+                                            </path>
+                                            <path
+                                                d="M19,10c0,2.206-1.794,4-4,4H7c-2.206,0-4-1.794-4-4c0-3.866,4-4,4-4h8C17,6,19,7.791,19,10z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <div class="services__card--content">
+                                        <h3 class="services__card--title mb-15">Cloud Computing</h3>
+                                        <p class="services__card--desc mb-20">Experienced in cloud computing
+                                            technologies, including AWS, Azure, and Google Cloud Platform. Skilled in
+                                            deploying, managing, and optimizing cloud-based solutions.</p>
+                                        <a class="services__card--link color1" target="_blank"
+                                            href="https://mywebmark.tech">Explore More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="services__card">
+                                    <span class="services__card--icon color2 mb-25">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-router">
+                                            <polygon points="4 11 9 18 15 6 20 13 20 16 4 16 4 11"></polygon>
+                                            <circle cx="12" cy="16" r="1"></circle>
+                                            <circle cx="12" cy="8" r="1"></circle>
+                                        </svg>
+                                    </span>
+                                    <div class="services__card--content">
+                                        <h3 class="services__card--title mb-15">Cisco Networking</h3>
+                                        <p class="services__card--desc mb-20">Skilled in Cisco networking technologies,
+                                            including routing, switching, and network security. Proficient in
+                                            configuring and troubleshooting Cisco devices.</p>
+                                        <a class="services__card--link color1" target="_blank"
+                                            href="https://mywebmark.tech">Explore More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+                                <div class="services__card">
+                                    <span class="services__card--icon color3 mb-25">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
+                                            <polyline points="16 18 22 12 16 6"></polyline>
+                                            <polyline points="8 6 2 12 8 18"></polyline>
+                                        </svg>
+                                    </span>
+                                    <div class="services__card--content">
+                                        <h3 class="services__card--title mb-15">Web Development</h3>
+                                        <p class="services__card--desc mb-20">Proficient in front-end and back-end web
+                                            development technologies, including HTML, CSS, JavaScript, PHP, and
+                                            frameworks like Laravel and CodeIgniter.</p>
+                                        <a class="services__card--link color1" target="_blank"
+                                            href="https://mywebmark.tech">Explore More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End services section -->
 
-      </div>
-      
+        <!-- Start about section -->
+        <section class="about__section about__section--bg section--padding" id="about">
+            <div class="container">
+                <div class="about__section--inner d-flex">
+                    <div class="about__content">
+                        <div class="section__heading mb-30">
+                            <span class="section__heading--subtitle text__secondary">ABOUT ME</span>
+                            <h2 class="section__heading--title">
+                                Web Developer & SEO Specialist
+                            </h2>
+                        </div>
+                        <div class="about__info">
+                            <h3 class="about__info--title text__secondary mb-20">PERSONAL INFOS:</h3>
+                            <ul class="about__info--wrapper d-flex">
+                                <li class="about__info--items">
+                                    <span class="about__info--label">Name:</span>
+                                    <span class="about__info--text">Mark Kinai</span>
+                                </li>
+                                <li class="about__info--items">
+                                    <span class="about__info--label">Age:</span>
+                                    <span class="about__info--text">21 Years</span>
+                                </li>
+                                <li class="about__info--items">
+                                    <span class="about__info--label">Address:</span>
+                                    <span class="about__info--text">Kenya, Nairobi</span>
+                                </li>
+                                <li class="about__info--items">
+                                    <span class="about__info--label">Email:</span>
+                                    <span class="about__info--text">
+                                        <a class="about__info--link" href="mailto:markkinai3@gmail.com">
+                                            Mark Kinai
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="about__info--items">
+                                    <span class="about__info--label">Phone:</span>
+                                    <span class="about__info--text">
+                                        <a class="about__info--link" href="tel: +1234567890">+254 792 966 620</a>
+                                    </span>
+                                </li>
+                            </ul>
+                            <a class="about__btn primary__btn" href="#">Hire Me</a>
+                        </div>
+                    </div>
+                    <div class="about__thumbnail">
+                        <div class="about__thumbnail--media position__relative">
+                            <img class="position__relative" src="assets/img/hero/cv image.png" alt="img">
+                        </div>
+                        <div class="about__experience text-center">
+                            <h4 class="about__experience--title title-stroke">2+</h4>
+                            <span class="about__experience--subtitle">Experience Working</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End about section -->
+        <!-- Start resume section -->
+        <section class="resume__section section--padding">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">EXPERICNCE AND EDUCATION</span>
+                        <h2 class="section__heading--title">Resume of Experience and Education</h2>
+                    </div>
+                    <div class="section__heading--right max-width-450">
+                        <p class="section__heading--desc">
+                            Explore my experience and education in the field of Information Technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="resume__section--inner d-flex">
+                    <div class="resume__step">
+                        <div class="border__position--style"> </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">HR Assistant</h3>
+                                        <span class="resume__content--subtitle">GILANIS DISTRIBUTORS</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Performed HR documentation, project support,
+                                        administrative support, onboarding assistance, Excel and HR system management,
+                                        and data analysis.</p>
+                                    <span class="resume__date">March 2024 - Present</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Web Developer & SEO Specialist</h3>
+                                        <span style="font-size: 11px!important;"
+                                            class="resume__content--subtitle">NANDRAJ LIMITED</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Designed and developed websites, implemented
+                                        SEO techniques, managed WordPress, resolved technical issues, conducted keyword
+                                        research, and optimized website performance.</p>
+                                    <span class="resume__date">Aug 2023 - March 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Web Developer (Internship)</h3>
+                                        <span class="resume__content--subtitle">VINTEX TECHNOLOGIES</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Collaborated in team projects, wrote code,
+                                        set up infrastructure, resolved technical issues, managed version control, and
+                                        optimized website performance.</p>
+                                    <span class="resume__date">April - july 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume__step">
+                        <div class="border__position--style"> </div>
 
-          
-      </div>
-    </section><!-- End Contact Me Section -->
-    
-    
-    <!-- ======= My Portfolio Section ======= -->
-    
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="44" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                        <path
+                                            d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Diploma in Computer Science</h3>
+                                        <span class="resume__content--subtitle">St Paul's University</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Focused on network administration,
+                                        programming, web development, software engineering, and server support.</p>
+                                    <span class="resume__date">2022 - 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="44" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                        <path
+                                            d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">High School Education</h3>
+                                        <span class="resume__content--subtitle">Kasikeu Boys High School</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">High school years marked by growth,
+                                        engagement in diverse subjects, and forming the foundation for future pursuits.
+                                    </p>
+                                    <span class="resume__date">2018 - 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End resume section -->
 
-        
-  </main><!-- End #main -->
+        <!-- Start Skills Section -->
+        <section class="skills__section section--padding pt-0">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">SKILLS</span>
+                        <h2 class="section__heading--title">My Skills and Expertise in Web Development</h2>
+                    </div>
+                    <div class="section__heading--right max-width-450">
+                        <p class="section__heading--desc">Explore my expertise in various areas of web development.</p>
+                    </div>
+                </div>
+                <div class="skills__section--inner d-flex justify-content-between">
+                    <div class="skills__step">
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Web Design</span>
+                            </div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">HTML</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">React js</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">PHP</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">JavaScript|AJAX|JQUERY</span>
+                                <span class="skills__count width_70">70%</span>
+                            </div>
+                            <div class="skills__field width_70"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">C++</span>
+                                <span class="skills__count width_70">70%</span>
+                            </div>
+                            <div class="skills__field width_70"></div>
+                        </div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Mark Kinai</h3>
-      <p>Thanks for your interest</p>
-      <div class="social-links">
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Java</span>
+                                <span class="skills__count width_70">70%</span>
+                            </div>
+                            <div class="skills__field width_70"></div>
+                        </div>
+                    </div>
+                    <div class="skills__step">
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Frameworks</span>
+                            </div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">CodeIgniter</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Bootstrap</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Materialize CSS</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Tailwind CSS</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Laravel</span>
+                                <span class="skills__count width_70">70%</span>
+                            </div>
+                            <div class="skills__field width_70"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Vue js</span>
+                                <span class="skills__count width_70">70%</span>
+                            </div>
+                            <div class="skills__field width_70"></div>
+                        </div>
+                    </div>
+                    <div class="skills__step">
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Other Tools</span>
+                            </div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Computer hardware & software</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
 
-        <a href="https://www.facebook.com/mark.kinai.1" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name"> SEO & Cloud Computing</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Articles & Blogs Writing</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">WordPress</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">MySQL</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                        <div class="skills__items">
+                            <div class="skills__text">
+                                <span class="skills__name">Git</span>
+                                <span class="skills__count width_90">90%</span>
+                            </div>
+                            <div class="skills__field width_90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Skills Section -->
 
+        <!-- Start Portfolio Section -->
+        <section class="portfolio__section portfolio__section--bg section--padding" id="portfolio">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">PORTFOLIO</span>
+                        <h2 class="section__heading--title">My Web Design Projects</h2>
+                    </div>
+                    <div class="section__heading--right max-width-450">
+                        <p class="section__heading--desc">Explore my recent web design projects.</p>
+                    </div>
+                </div>
+                <div class="portfolio__section--inner">
+                    <div class="button-group filters-button-group mb-50">
+                        <button class="filters__button--items button is-checked" data-filter="*">Show All</button>
+                        <button class="filters__button--items button" data-filter=".ecommerce">Ecommerce</button>
+                        <button class="filters__button--items button" data-filter=".real-estate">Real Estate</button>
+                        <button class="filters__button--items button" data-filter=".management">Management</button>
+                        <button class="filters__button--items button" data-filter=".apis">APIs</button>
+                    </div>
+                    <div class="portfolio__grid mb--n30">
+                        <div class="element-item real-estate" data-category="real-estate">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/house.png" alt="House-Sel">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">House-Sel</h3>
+                                        <p class="portfolio__desc text-white">Ecommerce website for selling houses.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item management" data-category="management">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/hrms.png" alt="Human-Resource">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Human Resource</h3>
+                                        <p class="portfolio__desc text-white">Real estate management system.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item apis" data-category="apis">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/weather.png" alt="Weather App">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Weather App</h3>
+                                        <p class="portfolio__desc text-white">Weather forecast application.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item ecommerce" data-category="ecommerce">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/ecormece.png" alt="Point of Sale">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Point of Sale</h3>
+                                        <p class="portfolio__desc text-white">Management system for sales transactions.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item management" data-category="management">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/loan.jpg" alt="Loan">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Loan Management</h3>
+                                        <p class="portfolio__desc text-white">Management system for loans.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item apis" data-category="apis">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal"
+                                    data-bs-target="#portfolioModal">
+                                    <div class="portfolio__image--card">
+                                        <img src="assets/img/stock.png" alt="Stock Market">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Stock Market</h3>
+                                        <p class="portfolio__desc text-white">APIs for stock market data.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <!-- End Portfolio Section -->
 
-        <a href="https://linkedin.com/in/mark-kinai-2948b3275/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <!-- End portfolio section -->
+        <!-- Start contact section -->
+        <!-- Add this script tag before the closing </body> tag -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Mark Kinai</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="whatsapp://send?phone=+254111893789">Mark Kinai</a>
-      </div>
+        <script>
+            (function () {
+                emailjs.init("FhXIz0zUnDqf0loBW");
+            })();
+        </script>
 
-    </div>
-  </footer><!-- End Footer -->
+        <!-- Your HTML code with the contact form -->
+        <section class="contact__section contact__section--bg" id="contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Contact form -->
+                        <form id="contactForm" class="contact__form">
+                            <div class="section__heading mb-50">
+                                <span class="section__heading--subtitle text__secondary">CONTACT</span>
+                                <h2 class="section__heading--title mb-10">Get in touch</h2>
+                                <p class="section__heading--desc">I am available for freelance projects. Please feel
+                                    free to contact me if you have any questions or inquiries.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                    <input id="name" class="contact__input--field" placeholder="Your name" type="text">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                    <input id="email" class="contact__input--field" placeholder="Your email"
+                                        type="email">
+                                </div>
+                            </div>
+                            <textarea id="message" class="contact__textarea--field" placeholder="Message"></textarea>
+                            <button type="submit" class="contact__button primary__btn">Send Request</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact__info">
+                            <div class="contact__info--items d-flex align-items-center">
+                                <span class="contact__info--icon">
+                                    <svg width="25" height="34" fill="currentColor" stroke="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <div class="contact__info--content">
+                                    <h3 class="contact__info--title">Phone Number</h3>
+                                    <p class="contact__info--desc">
+                                        <a href="tel:+254792966620">+254 792 966 620</a> <br>
+                                        <a href="tel:+254792966620">+254 111 893 789</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__info--items d-flex align-items-center">
+                                <span class="contact__info--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-mail">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </span>
+                                <div class="contact__info--content">
+                                    <h3 class="contact__info--title">Email Us</h3>
+                                    <p class="contact__info--desc">
+                                        <a href="mailto:markkinai3@gmail.com">markkinai3@gmail.com</a> <br>
+                                        <a href="mailto:mark1kinai1@gmail.com">mark1kinai1@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__info--items d-flex align-items-center">
+                                <span class="contact__info--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-mail">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </span>
+                                <div class="contact__info--content">
+                                    <h3 class="contact__info--title">Address</h3>
+                                    <p class="contact__info--desc">
+                                        20, 25 Nairobi,0123 <br>
+                                        Kenya
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+        <script>
+            // Function to send email using EmailJS
+            function sendEmail(e) {
+                e.preventDefault();
+                var recipientName = document.getElementById("name").value; // Get recipient's name from the form field
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
- 
+                // Show loading message
+                Swal.fire({
+                    title: 'Sending...',
+                    allowOutsideClick: false,
+                    showConfirmButton: false,
+                    onBeforeOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <!-- Modal Pop-up -->
-
-  </div><!-- ... Your HTML code ... -->
-
-  <script>
-    const buyNowButtons = document.querySelectorAll('.btn-buy');
-
-    buyNowButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const price = button.getAttribute('data-price');
-        const planDetails = button.getAttribute('data-details'); // Assuming you have a data-details attribute for each button
-
-        Swal.fire({
-          title: 'Express Interest',
-          text: `Choose how you would like to express your interest for the plan./nPrice: ksh ${price}/nPlan Details:/n${planDetails}`,
-          showCancelButton: true,
-          cancelButtonText: 'Cancel',
-          confirmButtonText: 'Chat with Mark on WhatsApp',
-          showDenyButton: true,
-          denyButtonText: 'Send Email'
-        }).then(result => {
-          if (result.isConfirmed) {
-            // Chat with Mark on WhatsApp
-            const phoneNumber = '+254111893789'; // Replace with your WhatsApp phone number
-            const whatsappMessage = `Hello Mark, I am interested in the plan./nPlan Details: ${planDetails}/nPrice: ksh ${price}`;
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-            // Check if WhatsApp is installed, if not, redirect to app store
-            const whatsappAppLink = `whatsapp://send?text=${encodeURIComponent(whatsappMessage)}&phone=${phoneNumber}`;
-            const isWhatsAppInstalled = window.location.href = whatsappAppLink;
-            if (!isWhatsAppInstalled) {
-              window.open(whatsappLink, '_blank');
+                emailjs.send("service_53uw2ra", "template_3qm51c4", {
+                    to_name: recipientName,
+                    email: email,
+                    message: message,
+                })
+                    .then(function (response) {
+                        console.log("Email sent successfully:", response);
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Your message has been sent successfully!',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                document.getElementById("contactForm").reset(); // Reset the form after successful submission
+                            }
+                        });
+                    })
+                    .catch(function (error) {
+                        console.log("Error sending email:", error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'An error occurred while sending your message. Please try again later.',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
+                        });
+                    });
             }
-          } else if (result.isDenied) {
-            // Send an email
-            const emailAddress = prompt('Enter your email address:');
-            if (emailAddress) {
-              const emailLink = `mailto:markcyfred@gmail.com?subject=Expressing Interest - Price: ksh ${price}&body=Email Address: ${emailAddress}%0D%0APlan Details: ${planDetails}`;
-              window.open(emailLink);
-            }
-          }
-        });
-      });
-    });
+
+            // Attach the sendEmail function to the form's submit event
+            document.getElementById("contactForm").addEventListener("submit", sendEmail);
+        </script>
 
 
-  </script>
-  
 
+        <!-- End contact section -->
 
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+        <!-- Start contact map area -->
+        <div class="contact__map--area">
+            <div class="container">
+                <iframe class="contact__map--iframe"
+                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=mywebmark&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- End contact map area -->
+        <!-- Start footer section -->
+        <footer class="footer footer__section footer__bg">
+            <div class="container">
+                <div class="main__footer d-flex justify-content-between align-items-center">
+                    <p class="copyright__content mb-0">Developed with <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="text-paragraph" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-heart">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </span> by <span>
+                            <a class="text__secondary" target="_blank" href="http://www.mywebmark.tech">
+                                MywebMark Technologies</a></span>© 2024</p>
+                    <ul class="footer__menu d-flex">
+                        <li><a class="footer__menu--link" href="#Terms">Terms & Condition</a></li>
+                        <li><a class="footer__menu--link" href="#privacy"> Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer section -->
 
-  <!-- Include SweetAlert JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    </main>
 
+    <!-- Scroll top bar -->
+    <button id="scroll__top"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="48"
+                d="M112 244l144-144 144 144M256 120v292" />
+        </svg></button>
+
+    <!-- All Script JS Plugins here  -->
+    <script src="assets/js/vendor/popper.js" defer="defer"></script>
+    <script src="assets/js/vendor/bootstrap.min.js" defer="defer"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Customscript js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Dark to light js -->
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.getElementById("light__to--dark")?.classList.add("dark--version");
+        }
+        if (localStorage.getItem("theme-color") === "light") {
+            document.getElementById("light__to--dark")?.classList.remove("dark--version");
+        } 
+    </script>
 </body>
 
 </html>
